@@ -22,6 +22,21 @@
 
         e.preventDefault();
     }
-
+$.ajax({
+            url: 'https://localhost:44352/api/movies',
+            dataType: 'json',
+            type: 'get',
+            contentType: 'application/json',
+            data: JSON.stringify(movies),
+            success: function( movies ){
+                $.each(movies, function(i, movie){
+                    $Movies.append('<li>Title: '+ movie.Title + ' Genre: '+movie.Genre + '</li>');
+                })
+            },
+            error: function( jqXhr, textStatus, errorThrown ){
+                console.log( errorThrown );
+            }
+        });
     $('#my-form').submit( processForm );
 })(jQuery);
+
