@@ -8,7 +8,14 @@
             type: 'get',
             success:function(movieList){
             $.each(movieList, function(i,movie){
-                $movieList.append('<li style="font-size:10px">Title: '+ movie.Title + ' Genre: '+movie.Genre + ' Director: '+ movie.Director +'</li>');
+                $movieList.append(
+                    //'<li style="font-size:10px">Title: '+ movie.Title + ' Genre: '+movie.Genre + ' Director: '+ movie.Director +'</li>'
+                    '<tr>'+
+                        '<td>'+'Title '+ movie.Title+ '</td>'+
+                        '<td>'+' Genre '+ movie.Genre+ '</td>'+
+                        '<td>'+' Director '+ movie.Director+ '</td>'+
+                        '<td>'+' BUTTON'+'</td>'+
+                    '</tr>)');
             }); 
             },
             error: function() {
