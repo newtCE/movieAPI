@@ -1,4 +1,24 @@
 (function($){
+
+    var $movieList=$('#movieList');
+
+    $.ajax({
+            url: 'https://localhost:44352/api/movies',
+            dataType: 'json',
+            type: 'get',
+            success:function(movieList){
+            $.each(movieList, function(i,movie){
+                $movieList.append('<li style="font-size:10px">Title: '+ movie.Title + ' Genre: '+movie.Genre + ' Director: '+ movie.Director +'</li>');
+            }); 
+            },
+            error: function() {
+                alert('error loading movie list');
+            }
+
+
+        });
+
+
     function processForm( e ){
         var dict = {
         	Title : this["title"].value,
@@ -24,4 +44,5 @@
     }
 
     $('#my-form').submit( processForm );
+    
 })(jQuery);
