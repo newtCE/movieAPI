@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "c82ff406-d82e-48a6-a78e-650f45ad029e",
+		"name": "MovieAPItest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44374/api/movies/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2e1be61-f9ba-4dc9-9ca5-db817d7b130a",
+						"exec": [
+							"{\r",
+							"        \"MovieId\": 6,\r",
+							"        \"Title\": \"The Departed 2\",\r",
+							"        \"Genre\": \"Drama\",\r",
+							"        \"Director\": \"Martin Scorsese\"\r",
+							"    }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44374/api/movies/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44374",
+					"path": [
+						"api",
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44374/api/movies/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2e1be61-f9ba-4dc9-9ca5-db817d7b130a",
+						"exec": [
+							"{\r",
+							"        \"MovieId\": 6,\r",
+							"        \"Title\": \"The Departed 2\",\r",
+							"        \"Genre\": \"Drama\",\r",
+							"        \"Director\": \"Martin Scorsese\"\r",
+							"    }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44374/api/movies/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44374",
+					"path": [
+						"api",
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44374/api/movies/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2e1be61-f9ba-4dc9-9ca5-db817d7b130a",
+						"exec": [
+							"{\r",
+							"        \"MovieId\": 6,\r",
+							"        \"Title\": \"The Departed 2\",\r",
+							"        \"Genre\": \"Drama\",\r",
+							"        \"Director\": \"Martin Scorsese\"\r",
+							"    }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"MovieId\": 2,\r\n        \"Title\": \"The Departed 2\",\r\n        \"Genre\": \"Drama\",\r\n        \"Director\": \"Martin Scorsese\"\r\n    }"
+				},
+				"url": {
+					"raw": "https://localhost:44374/api/movies/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44374",
+					"path": [
+						"api",
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44374/api/movies/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2e1be61-f9ba-4dc9-9ca5-db817d7b130a",
+						"exec": [
+							"{\r",
+							"        \"MovieId\": 6,\r",
+							"        \"Title\": \"The Departed 2\",\r",
+							"        \"Genre\": \"Drama\",\r",
+							"        \"Director\": \"Martin Scorsese\"\r",
+							"    }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"MovieId\": 2,\r\n        \"Title\": \"The Departed 2\",\r\n        \"Genre\": \"Drama\",\r\n        \"Director\": \"Martin Scorsese\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44374/api/movies/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44374",
+					"path": [
+						"api",
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44374/api/movies/6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2e1be61-f9ba-4dc9-9ca5-db817d7b130a",
+						"exec": [
+							"{\r",
+							"        \"MovieId\": 6,\r",
+							"        \"Title\": \"The Departed 2\",\r",
+							"        \"Genre\": \"Drama\",\r",
+							"        \"Director\": \"Martin Scorsese\"\r",
+							"    }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"MovieId\": 6,\r\n  \"Title\": \"Guyver: Dark Hero\",\r\n  \"Genre\": \"Science Fiction\",\r\n  \"Director\": \"Steve Wang\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44374/api/movies/6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44374",
+					"path": [
+						"api",
+						"movies",
+						"6"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44374/api/movies/6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2e1be61-f9ba-4dc9-9ca5-db817d7b130a",
+						"exec": [
+							"{\r",
+							"        \"MovieId\": 6,\r",
+							"        \"Title\": \"The Departed 2\",\r",
+							"        \"Genre\": \"Drama\",\r",
+							"        \"Director\": \"Martin Scorsese\"\r",
+							"    }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"MovieId\": 6,\r\n  \"Title\": \"Guyver: Dark Hero\",\r\n  \"Genre\": \"Science Fiction\",\r\n  \"Director\": \"Steve Wang\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44374/api/movies/6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44374",
+					"path": [
+						"api",
+						"movies",
+						"6"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
