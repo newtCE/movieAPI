@@ -1,0 +1,38 @@
+body{
+	background-color: rgb(112,96,96);
+}
+h3{
+	font-family: arial, sans-serif;
+	text-align: center;
+	color: black;
+}
+p{
+	font-family: arial, sans-serif;
+	text-align: center;
+}
+form{
+	margin: auto;
+  	font-family: arial, sans-serif;
+  	border-collapse: collapse;
+  	text-align: center;
+  	width: 100%;	
+}
+button{
+	border-radius: 16px;	
+}
+table {
+	margin: auto;
+  	font-family: arial, sans-serif;
+  	border-collapse: collapse;
+  	text-align: center;
+  	border-radius: 16px;
+  	width: 66%;
+}
+td, th {
+  	border: 1px solid #DDDDDD;
+  	text-align: center;
+  	padding: 8px;
+}
+tr:nth-child(even) {
+  	background-color: rgb(176,160,144);
+}

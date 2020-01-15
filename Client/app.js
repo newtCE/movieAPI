@@ -22,13 +22,12 @@
         });
         e.preventDefault();
     }
-    $('#my-form').submit( processForm );    
+    $('#my-form').submit( processForm );
 })(jQuery);
 
-var id;
-var movie;
-function putEdit(id){
-   
+
+function putEdit(id)
+{
     var dict = {
             Title : $('#titlename').val(),
             Genre: $('#genrename').val(),
@@ -45,14 +44,14 @@ function putEdit(id){
                 alert('success')
                 $('#movieList').empty();
                 Get();
-            
             },
             error: function() {
                 alert('error loading movie list');
             }})
-        };
+}
 
-        function DeleteEntry(id){
+function DeleteEntry(id)
+{
             $(function(){
                 $.ajax({
                 type: 'delete',
@@ -67,42 +66,32 @@ function putEdit(id){
                 }
             })
         });
-    }
+}
 
-    function Get()
-    {
-    var $movieList=$('#movieList');
+function Get()
+{
     $.ajax({
             url: 'https://localhost:44352/api/movies',
             dataType: 'json',
             type: 'GET',
             success:function(movies){
             $.each(movies, function(i,movie){
-                $movieList.append(
-                    //'<li style="font-size:10px">Title: '+ movie.Title + ' Genre: '+movie.Genre + ' Director: '+ movie.Director +'</li>'
-                    '<tr>'+
-                        '<td>'+ movie.MovieId+ '</td>'+
-                        '<td>'+ movie.Title+ '</td>'+
-                        '<td>'+ movie.Genre+ '</td>'+
-                        '<td>'+ movie.Director+ '</td>'+
-                        '<td>'+'<button id="Edit" type="button" onClick="putEdit('+movie.MovieId+')">Edit Entry</button>'+'</td>'+
-                        '<td>'+'<button type="button" onCLick="DeleteEntry('+movie.MovieId+')">Remove Entry</button>'+'</td>'+
-                        
-                    '</tr>)');
+               addmovie(movie);
             });
             },
             error: function() {
                 alert('error loading movie list');
             }});
-    }
+}
 
-    function addmovie(movie){
+function addmovie(movie)
+{
          $('#movieList').append('<tr>'+
                         '<td>'+ movie.MovieId+ '</td>'+
                         '<td>'+ movie.Title+ '</td>'+
                         '<td>'+ movie.Genre+ '</td>'+
-                        '<td>'+ movie.Director+ '</td>'+                   
+                        '<td>'+ movie.Director+ '</td>'+
                         '<td>'+'<button onClick="putEdit('+movie.MovieId+')">Edit Entry</button>'+'</td>'+
-                        '<td>'+'<button onCLick="DeleteEntry('+movie.MovieId+')">Remove Entry</button>'+'</td>'+ 
+                        '<td>'+'<button onCLick="DeleteEntry('+movie.MovieId+')">Remove Entry</button>'+'</td>'+
                     '</tr>)');
-    } 
+}
