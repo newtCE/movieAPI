@@ -13,8 +13,8 @@
             contentType: 'application/json',
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
-                $('#response pre').html( data );
-                addmovie(dict);
+                $('#movieList').empty();
+                Get();
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
@@ -97,7 +97,7 @@ function putEdit(id){
     }
 
     function addmovie(movie){
-         $movieList.append('<tr>'+
+         $('#movieList').append('<tr>'+
                         '<td>'+ movie.MovieId+ '</td>'+
                         '<td>'+ movie.Title+ '</td>'+
                         '<td>'+ movie.Genre+ '</td>'+
