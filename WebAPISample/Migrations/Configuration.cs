@@ -22,8 +22,8 @@ namespace WebAPISample.Migrations
     new Models.Movie { Title = "Die Hard", Genre = "Action", Director = "John McTiernan" });
             //  This method will be called after migrating to the latest version.
 
-    //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-    //  to avoid creating duplicate seed data.
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data.
         }
     }
 }

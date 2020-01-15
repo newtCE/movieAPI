@@ -223,9 +223,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001141938250_Initial.cs" />
-    <Compile Include="Migrations\202001141938250_Initial.Designer.cs">
-      <DependentUpon>202001141938250_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202001142004586_initial.cs" />
+    <Compile Include="Migrations\202001142004586_initial.Designer.cs">
+      <DependentUpon>202001142004586_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -343,14 +343,13 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <EmbeddedResource Include="Migrations\202001142004586_initial.resx">
+      <DependentUpon>202001142004586_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202001141938250_Initial.resx">
-      <DependentUpon>202001141938250_Initial.cs</DependentUpon>
-    </EmbeddedResource>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
