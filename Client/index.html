@@ -4,25 +4,44 @@
     <title>jQuery AJAX POST Form</title>
     <meta charset="utf-8">
 </head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #DDDDDD;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #DDDDDD;
+}
+</style>
 <body>
-
 <div id="response">
     <pre></pre>
 </div>
-
 <form id="my-form">
-    <input type="text" name="title" placeholder="Title" />
-    <input type="text" name="genre" placeholder="Genre" />
-    <input type="text" name="director" placeholder="Director" />
-
-    <button type="submit">Submit</button>
+	<label for="title">Title:</label>
+    <input id="titlename" type="text" name="title" placeholder="Title" />
+    <label for="genre">Genre:</label>
+    <input id="genrename" type="text" name="genre" placeholder="Genre" />
+    <label for="director">Director:</label>
+    <input id="directorname" type="text" name="director" placeholder="Director" />
+    <button type="submit">Add Movie To List</button>
 </form>
-
 <p>Movie List</p>
 <table id="movieList">
-
+	<tr>
+		<th style="font: bolder;">Movie Id</th>
+		<th style="font: bolder;">Title</th>
+		<th style="font: bolder;">Genre</th>
+		<th style="font: bolder;">Director</th>
+		<th style="font: bolder;">Edit</th>
+	</tr>
 </table>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="./app.js"></script>
 </body>
