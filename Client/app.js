@@ -3,7 +3,12 @@
     var $movieList=$('#movieList');
     var id;
     function addmovie(movie){
-         $movieList.append('<li style="font-size:15px">Movie Id: '+movie.MovieId+' Title: '+ movie.Title + ' Genre: '+movie.Genre + ' Director: '+ movie.Director +'</li>');
+         $movieList.append('<tr>'+
+                        '<td>'+ movie.Title+ '</td>'+
+                        '<td>'+ movie.Genre+ '</td>'+
+                        '<td>'+ movie.Director+ '</td>'+
+                        '<td>'+' BUTTON'+'</td>'+
+                    '</tr>)');
     }
     $.ajax({
             url: 'https://localhost:44352/api/movies',
@@ -11,7 +16,15 @@
             type: 'get',
             success:function(movieList){
             $.each(movieList, function(i,movie){
-                $movieList.append('<li style="font-size:15px">Movie Id: '+movie.MovieId+' Title: '+ movie.Title + ' Genre: '+movie.Genre + ' Director: '+ movie.Director +'</li>');
+
+                $movieList.append(
+                    //'<li style="font-size:10px">Title: '+ movie.Title + ' Genre: '+movie.Genre + ' Director: '+ movie.Director +'</li>'
+                    '<tr>'+
+                        '<td>'+ movie.Title+ '</td>'+
+                        '<td>'+ movie.Genre+ '</td>'+
+                        '<td>'+ movie.Director+ '</td>'+
+                        '<td>'+' BUTTON'+'</td>'+
+                    '</tr>)');
 
             }); 
             },

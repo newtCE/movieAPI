@@ -4,6 +4,23 @@
     <title>jQuery AJAX POST Form</title>
     <meta charset="utf-8">
 </head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
 <body>
 
 <div id="response">
@@ -23,9 +40,14 @@
 
 
 <p>Movie List</p>
-<ul id="movieList">
-	
-</ul>
+<table id="movieList">
+	<tr>
+		<th style="font: bolder;">Title</th>
+		<th style="font: bolder;">Genre</th>
+		<th style="font: bolder;">Director</th>
+	</tr>
+
+</table>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
