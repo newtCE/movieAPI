@@ -91,6 +91,7 @@ namespace WebAPISample.Controllers
         public async Task<IHttpActionResult> DeleteMovie(int id)
         {
             Movie movie = await db.Movies.FindAsync(id);
+            
             if (movie == null)
             {
                 return NotFound();

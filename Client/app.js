@@ -13,8 +13,9 @@
             contentType: 'application/json',
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
-                $('#response pre').html( data );
-                addmovie(dict);
+                
+                 $('#movieList').empty();
+                Get();
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
@@ -80,8 +81,8 @@ function putEdit(id){
                         '<td>'+ movie.Title+ '</td>'+
                         '<td>'+ movie.Genre+ '</td>'+
                         '<td>'+ movie.Director+ '</td>'+
-                        '<td>'+'<button id="Edit" type="button" onClick="putEdit('+movie.MovieId+')">Edit Entry</button>'+'</td>'+
-                        '<td>'+'<button type="button" onCLick="DeleteEntry('+movie.MovieId+')">Remove Entry</button>'+'</td>'+
+                        '<td>'+'<button id="Edit" type="button" onClick="putEdit('+movie.MovieId+')">EDIT ENTRY</button>'+'</td>'+
+                        '<td>'+'<button type="button" onCLick="DeleteEntry('+movie.MovieId+')">REMOVE ENTRY</button>'+'</td>'+
                     '</tr>)');
             });
             },
@@ -90,7 +91,7 @@ function putEdit(id){
             }});
     }
     function addmovie(movie){
-         $movieList.append('<tr>'+
+         $('#movieList').append('<tr>'+
                         '<td>'+ movie.MovieId+ '</td>'+
                         '<td>'+ movie.Title+ '</td>'+
                         '<td>'+ movie.Genre+ '</td>'+
